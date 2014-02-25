@@ -1,5 +1,5 @@
 #ifndef		__MAP_HH__
-# define       	__MAP_HH__
+#define     __MAP_HH__
 
 #include	<string>
 #include	<iostream>

@@ -8,7 +8,10 @@ std::vector<std::string> _map;
 StartInstance::StartInstance()
 {
 	isInit = false;
-	_map = map->parser("MAP/map1");
+	map = new Map();
+	//_map = map->parser("MAP/map1");
+		_map = map->parser("MAP/map1.txt");
+
 	map->setMap(_map);
 }
 

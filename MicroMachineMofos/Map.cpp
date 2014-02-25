@@ -15,7 +15,7 @@ int			Map::checker(std::string path)
   std::ifstream		fd(path.c_str(), std::ios::in);
   std::string		tmp;
   int			xlines = 0;
-  int			ylines = 0;
+//  int			ylines = 0;
   int			xcheck = 0;
 
   if (fd)
@@ -43,16 +43,18 @@ std::vector<std::string> Map::parser(std::string path)
   if (fd)
     {
       std::string       str;
-      if (checker(path) == 1)
-	throw myException("Map Error.\n");
+    //  if (checker(path) == 1)
+	//throw myException("Map Error.\n");
       while (getline(fd, str))
 	{
-	  _map.push_back(str);
-	  y++;
+	_map.push_back(str);
+//	  		_map.push_back("test");
+
+		y++;
 	}
-      tmp = str;
+    //  tmp = str;
     }
-  x = tmp.size();
+//  x = tmp.size();
   return _map;
 }
 
