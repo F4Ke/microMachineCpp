@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Luis. All rights reserved.
 //
 
-#include "power.h"
+#include "power.hpp"
 
 //Constructeur + Destructeur
 
@@ -18,7 +18,7 @@ power::~power() {
 
 //Methodes
 
-void    power::setPowerOnMap(std::string::sizeof pos, int i) {
+void    power::setPowerOnMap(std::string::size_type pos, int i) {
     
     std::srand(std::time(0));
     int powerRand = (std::rand() % 2) + 1;
@@ -32,21 +32,21 @@ void    power::setPowerOnMap(std::string::sizeof pos, int i) {
 
 void    power::findPowerOnMap(std::vector<std::string> map) {
 
-    std::ifstream file(argv[1], std::ios::in);
+    std::ifstream fileMap(argv[1], std::ios::in);
     
     int i = 0;
     
-    if (file) {
+    if (fileMap) {
         std::cout << "Map is Open" << std::endl;
         while (getline(fileMap, powerMap)) {
-            while (powerMap) {
-                pos = powerMap.find("X");
+            while ((pos = powerMap.find("X"))) {
+               
                 if (pos == std::string::npos)
                     setPowerOnMap(pos, i);
             }
             i++;
         }
-        file.close();
+        fileMap.close();
     }
     else
         std::cerr << "Impossible to open Map" << std::endl;

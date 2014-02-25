@@ -10,10 +10,15 @@
 #define __MicroMachine__power__
 
 #include    <iostream>
+#include    <vector>
+#include    <string>
+#include    <cstdlib>
+#include    <ctime>
+
 
 enum ePower {
-    powerUP = 1,
-    powerDown = 2,
+    powerUp = 1,
+    powerDown = 2
 };
 
 class       power {
@@ -27,7 +32,7 @@ public:
     std::string::size_type pos;
     
     void    findPowerOnMap(std::vector<std::string> map);
-    void    setPowerOnMap(std::string::size_type pos)
+    void    setPowerOnMap(std::string::size_type pos, int i);
 };
 
 #endif /* defined(__MicroMachine__power__) */
