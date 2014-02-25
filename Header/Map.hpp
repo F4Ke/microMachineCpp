@@ -11,7 +11,7 @@
 class		Map
 {
 private :
-  std::vector<std::string> _map;
+  std::vector<std::string> *_map;
   int x;
   int y;
 
@@ -20,15 +20,15 @@ public :
   Map();
   ~Map();
 
-  std::vector<std::string> parser(std::string path);
+  std::vector<std::string> *parser(std::string path);
   int	checker(std::string path);
 
-  void setMap(std::vector<std::string> &map) {_map = map;}
+  void setMap(std::vector<std::string> *map) {_map = map;}
 
   int getX() { return x; }
   int getY() { return y; }
 
-  std::vector<std::string> getMap() { return _map; } // A MEDITER
+  std::vector<std::string> *getMap() { return _map; } // A MEDITER
 
 };
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0521F2418BD496B00610E82 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0521F2318BD496B00610E82 /* Map.cpp */; };
 		A0A0BF1B18BD1354008581AC /* microMachineCpp.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0A0BF1A18BD1354008581AC /* microMachineCpp.1 */; };
 		A0A0BF2C18BD137B008581AC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0A0BF2718BD137B008581AC /* main.cpp */; };
 		A0A0BF2D18BD137B008581AC /* myException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0A0BF2818BD137B008581AC /* myException.cpp */; };
@@ -28,15 +29,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A0521F2218BD496100610E82 /* Map.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Map.hpp; sourceTree = "<group>"; };
+		A0521F2318BD496B00610E82 /* Map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Map.cpp; sourceTree = "<group>"; };
 		A0A0BF1518BD1354008581AC /* microMachineCpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = microMachineCpp; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A0BF1A18BD1354008581AC /* microMachineCpp.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = microMachineCpp.1; sourceTree = "<group>"; };
 		A0A0BF2218BD137B008581AC /* myException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = myException.hpp; sourceTree = "<group>"; };
-		A0A0BF2318BD137B008581AC /* power.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = power.hpp; sourceTree = "<group>"; };
+		A0A0BF2318BD137B008581AC /* Power.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Power.hpp; sourceTree = "<group>"; };
 		A0A0BF2418BD137B008581AC /* StartInstance.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StartInstance.hpp; sourceTree = "<group>"; };
 		A0A0BF2518BD137B008581AC /* TimeOut.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TimeOut.hpp; sourceTree = "<group>"; };
 		A0A0BF2718BD137B008581AC /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A0A0BF2818BD137B008581AC /* myException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = myException.cpp; sourceTree = "<group>"; };
-		A0A0BF2918BD137B008581AC /* power.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = power.cpp; sourceTree = "<group>"; };
+		A0A0BF2918BD137B008581AC /* Power.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Power.cpp; sourceTree = "<group>"; };
 		A0A0BF2A18BD137B008581AC /* StartInstance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StartInstance.cpp; sourceTree = "<group>"; };
 		A0A0BF2B18BD137B008581AC /* TimeOut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeOut.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,8 +84,9 @@
 		A0A0BF2118BD137B008581AC /* Header */ = {
 			isa = PBXGroup;
 			children = (
+				A0521F2218BD496100610E82 /* Map.hpp */,
 				A0A0BF2218BD137B008581AC /* myException.hpp */,
-				A0A0BF2318BD137B008581AC /* power.hpp */,
+				A0A0BF2318BD137B008581AC /* Power.hpp */,
 				A0A0BF2418BD137B008581AC /* StartInstance.hpp */,
 				A0A0BF2518BD137B008581AC /* TimeOut.hpp */,
 			);
@@ -93,9 +97,10 @@
 		A0A0BF2618BD137B008581AC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A0521F2318BD496B00610E82 /* Map.cpp */,
 				A0A0BF2718BD137B008581AC /* main.cpp */,
 				A0A0BF2818BD137B008581AC /* myException.cpp */,
-				A0A0BF2918BD137B008581AC /* power.cpp */,
+				A0A0BF2918BD137B008581AC /* Power.cpp */,
 				A0A0BF2A18BD137B008581AC /* StartInstance.cpp */,
 				A0A0BF2B18BD137B008581AC /* TimeOut.cpp */,
 			);
@@ -155,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0A0BF2C18BD137B008581AC /* main.cpp in Sources */,
+				A0521F2418BD496B00610E82 /* Map.cpp in Sources */,
 				A0A0BF3018BD137B008581AC /* TimeOut.cpp in Sources */,
 				A0A0BF2F18BD137B008581AC /* StartInstance.cpp in Sources */,
 				A0A0BF2D18BD137B008581AC /* myException.cpp in Sources */,

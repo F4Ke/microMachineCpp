@@ -3,12 +3,12 @@
 #include "TimeOut.hpp"
 
 Map *map = NULL;
-std::vector<std::string> _map;
+std::vector<std::string> *_map;
 
 StartInstance::StartInstance()
 {
 	isInit = false;
-	_map = map->parser("MAP/map1");
+	_map = map->parser("/Users/Luis/Documents/Dev/Depot/microMachineCpp/MAP/map1");
 	map->setMap(_map);
 }
 
