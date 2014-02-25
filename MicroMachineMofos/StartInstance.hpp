@@ -4,6 +4,7 @@
 
 #include <thread>
 #include "myException.hpp"
+#include "Map.hpp"
 
 class StartInstance 
 {

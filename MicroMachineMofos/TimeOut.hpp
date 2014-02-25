@@ -37,7 +37,7 @@ class timer {
 			if (etypeMod == THINK)
 				return seconds >= elapsedTimeMillisecond();
 			else
-				false;
+				return false;
 		}
 };
 

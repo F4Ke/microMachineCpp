@@ -2,9 +2,14 @@
 #include "StartInstance.hpp"
 #include "TimeOut.hpp"
 
+Map *map = NULL;
+std::vector<std::string> _map;
+
 StartInstance::StartInstance()
 {
 	isInit = false;
+	_map = map->parser("MAP/map1");
+	map->setMap(_map);
 }
 
 StartInstance::~StartInstance()
@@ -29,6 +34,7 @@ void StartInstance::Launch()
 	{
 		while(tRun->isTimeoutRUN())
 		{
+			// affiche map - calle un bonnus ou deux - reaffiche
 		}
 
 	}

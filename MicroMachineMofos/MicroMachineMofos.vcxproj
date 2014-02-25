@@ -63,12 +63,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map.cpp" />
     <ClCompile Include="myException.cpp" />
+    <ClCompile Include="power.cpp" />
     <ClCompile Include="StartInstance.cpp" />
     <ClCompile Include="TimeOut.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Map.hpp" />
     <ClInclude Include="myException.hpp" />
+    <ClInclude Include="power.hpp" />
     <ClInclude Include="StartInstance.hpp" />
     <ClInclude Include="TimeOut.hpp" />
   </ItemGroup>
