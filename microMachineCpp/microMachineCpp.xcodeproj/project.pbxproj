@@ -18,7 +18,7 @@
 		A0A0BF1318BD1354008581AC /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			dstPath = /usr/share/man/man1;
 			dstSubfolderSpec = 0;
 			files = (
 				A0A0BF1B18BD1354008581AC /* microMachineCpp.1 in CopyFiles */,
@@ -265,6 +265,7 @@
 				A0A0BF2018BD1354008581AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
