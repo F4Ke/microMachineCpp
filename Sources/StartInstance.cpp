@@ -2,13 +2,17 @@
 #include "StartInstance.hpp"
 #include "TimeOut.hpp"
 
-Map *map = NULL;
-std::vector<std::string> *_map;
+
+
 
 StartInstance::StartInstance()
 {
 	isInit = false;
+	map = new Map();
+    _map = new std::vector<std::string>();
 	_map = map->parser("/Users/Luis/Documents/Dev/Depot/microMachineCpp/MAP/map1");
+    //_map = map->parser("MAP/map1.txt");
+
 	map->setMap(_map);
 }
 
@@ -24,6 +28,7 @@ void ActThreadRun(TimeOut *tRun)
 void StartInstance::Launch()
 {
 	isInit = true;
+    Power *p = new Power();
 	TimeOut *tRun = new TimeOut();
 //	std::thread t1(tRun->startRun);
 	std::thread t1 (ActThreadRun, tRun);
@@ -34,7 +39,13 @@ void StartInstance::Launch()
 	{
 		while(tRun->isTimeoutRUN())
 		{
-			// affiche map - calle un bonnus ou deux - reaffiche
+            std::cout << "V1" << std::endl;
+			map->seeMap();
+            std::cout << "-----------" << std::endl;
+            map = p->findPowerOnMap(map);
+            std::cout << "V2" << std::endl;
+            map->seeMap();
+            break;
 		}
 
 	}

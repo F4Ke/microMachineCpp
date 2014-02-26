@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A0521F2418BD496B00610E82 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0521F2318BD496B00610E82 /* Map.cpp */; };
+		A0521F2518BD81A600610E82 /* Power.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0A0BF2918BD137B008581AC /* Power.cpp */; };
 		A0A0BF1B18BD1354008581AC /* microMachineCpp.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0A0BF1A18BD1354008581AC /* microMachineCpp.1 */; };
 		A0A0BF2C18BD137B008581AC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0A0BF2718BD137B008581AC /* main.cpp */; };
 		A0A0BF2D18BD137B008581AC /* myException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0A0BF2818BD137B008581AC /* myException.cpp */; };
@@ -159,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0521F2518BD81A600610E82 /* Power.cpp in Sources */,
 				A0A0BF2C18BD137B008581AC /* main.cpp in Sources */,
 				A0521F2418BD496B00610E82 /* Map.cpp in Sources */,
 				A0A0BF3018BD137B008581AC /* TimeOut.cpp in Sources */,
