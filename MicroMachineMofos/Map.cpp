@@ -2,6 +2,7 @@
 
 Map::Map()
 {
+    _map = new std::vector<std::string>();
   x = 0;
   y = 0;
 }
@@ -15,7 +16,6 @@ int			Map::checker(std::string path)
   std::ifstream		fd(path.c_str(), std::ios::in);
   std::string		tmp;
   int			xlines = 0;
-//  int			ylines = 0;
   int			xcheck = 0;
 
   if (fd)
@@ -33,9 +33,10 @@ int			Map::checker(std::string path)
 	}
       return (0);
     }
+    return (0);
 }
 
-std::vector<std::string> Map::parser(std::string path)
+std::vector<std::string> *Map::parser(std::string path)
 {
   std::ifstream fd(path.c_str(), std::ios::in);
   std::string tmp;
@@ -43,19 +44,44 @@ std::vector<std::string> Map::parser(std::string path)
   if (fd)
     {
       std::string       str;
-    //  if (checker(path) == 1)
-	//throw myException("Map Error.\n");
       while (getline(fd, str))
 	{
-	_map.push_back(str);
-//	  		_map.push_back("test");
-
+        _map->push_back(str);
 		y++;
 	}
-    //  tmp = str;
     }
-//  x = tmp.size();
   return _map;
 }
 
+//void        Map::seeMap() {
+//    std::vector<std::string>::iterator iter = _map->begin();
+//    while (iter != _map->end()) {
+//        std::cout << *iter << std::endl;
+//        iter++;
+//    }
+//}
+//
+//void        Map::setLine(int i, std::string *tmp) {
+//    this->_map->insert(_map->begin() + i, *tmp);
+//    this->_map->erase(_map->begin() + i + 1);
+//}
 
+/// save ::
+void        Map::seeMap() {
+    std::vector<std::string>::iterator iter = _map->begin();
+	int line = 0;
+    while (iter != _map->end()) {
+          std::cout << line << ": " << *iter << std::endl;
+
+        iter++;
+		line++;
+    }
+}
+
+std::vector<std::string>::iterator        Map::setLine(int i, std::string *tmp) {
+     std::vector<std::string>::iterator deleted;   
+	this->_map->insert(_map->begin() + i, *tmp);
+   deleted = this->_map->erase(_map->begin() + i + 1);
+
+	return deleted;
+}

@@ -5,9 +5,15 @@
 #include <thread>
 #include "myException.hpp"
 #include "Map.hpp"
+#include "Power.hpp"
+
 
 class StartInstance 
 {
+public:
+    Map *map;
+    std::vector<std::string> *_map;
+    
 public:
 	StartInstance();
 	~StartInstance();

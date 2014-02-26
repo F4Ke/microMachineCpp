@@ -5,30 +5,33 @@
 #include	<iostream>
 #include	<vector>
 #include	<fstream>
+#include    <iterator>
 #include    "myException.hpp"
-//class		MyGame;
 
 class		Map
 {
 private :
-  std::vector<std::string> _map;
-  int x;
-  int y;
+    std::vector<std::string> *_map;
+    int x;
+    int y;
 
 public :
 
-  Map();
-  ~Map();
+    Map();
+    ~Map();
 
-  std::vector<std::string> parser(std::string path);
-  int	checker(std::string path);
+    std::vector<std::string> *parser(std::string path);
+    int	checker(std::string path);
 
-  void setMap(std::vector<std::string> &map) {_map = map;}
+    void setMap(std::vector<std::string> *map) {_map = map;}
 
-  int getX() { return x; }
-  int getY() { return y; }
+    int getX() { return x; }
+    int getY() { return y; }
 
-  std::vector<std::string> getMap() { return _map; } // A MEDITER
+    std::vector<std::string> *getMap() { return _map; }
+    void        seeMap();
+    std::vector<std::string>::iterator        setLine(int i, std::string *tmp);
+  // void        setLine(int i, std::string *tmp);
 
 };
 
