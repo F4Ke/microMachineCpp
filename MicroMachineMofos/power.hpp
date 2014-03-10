@@ -29,7 +29,7 @@ public:
     Power();
     ~Power();
     
-    ePower  powerMode;
+	ePower  powerMode;
     std::string powerMap;
     std::string::size_type pos;
     
