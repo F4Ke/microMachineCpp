@@ -3,8 +3,6 @@
 #include "TimeOut.hpp"
 
 
-
-
 StartInstance::StartInstance()
 {
 	isInit = false;
@@ -20,25 +18,18 @@ StartInstance::~StartInstance()
 {
 }
 
-void ActThreadRun(TimeOut *tRun)
-{
-	tRun->startRun();
-}
+
 
 void StartInstance::Launch()
 {
 	isInit = true;
-    Power *p = new Power();
-	TimeOut *tRun = new TimeOut();
-//	std::thread t1(tRun->startRun);
-	std::thread t1 (ActThreadRun, tRun);
-	t1.join();
-	tRun->startRun();
+	VirtualMachine *vm = new VirtualMachine();
+
 
 	if (isInit)
 	{
-		while(tRun->isTimeoutRUN())
-		{
+		  Power *p = new Power();
+
             std::cout << "V1" << std::endl;
 			map->seeMap();
             std::cout << "-----------" << std::endl;
@@ -46,8 +37,9 @@ void StartInstance::Launch()
             std::cout << "V2" << std::endl;
             map->seeMap();
 			std::cout << "-----------" << std::endl;
-			while (true);
-		}
+	
+			
+			vm->Launch();
 
 	}
 	else
@@ -56,5 +48,4 @@ void StartInstance::Launch()
 		throw myException(error);
 
 	}
-
-	}
+}

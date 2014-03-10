@@ -52,6 +52,7 @@ public:
 	bool isTimeoutRUN();
 	bool isTimeoutTHINK();
 
+
 private:
 	unsigned long timeSecondsRunTotal;// = 60s;
 	unsigned long timeMilissecondsToThink;// = 15ms;

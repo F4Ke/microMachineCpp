@@ -18,3 +18,7 @@ void    MicroMachine::setOnMap()
 	return ;
 }
 
+void    MicroMachine::state() {
+    
+}
+ 

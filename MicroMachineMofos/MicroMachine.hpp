@@ -26,8 +26,12 @@ public:
     ~MicroMachine();
     
     
-    void   setOnMap();
+    void    setOnMap();
+    void    state();
+	void   abortAction() {}
+	void    startThinking() {}
 
 };
 
 #endif /* defined(__MICROMACHINE__) */
+
