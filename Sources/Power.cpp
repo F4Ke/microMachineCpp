@@ -19,7 +19,7 @@ Power::~Power() {
 
 //Methodes
 
-std::string    *Power::setPowerOnMap(std::string::size_type pos, std::string str) {
+void    Power::setPowerOnMap(std::string::size_type pos, std::string str, std::string &tmp) {
     
     std::string *finalReturn;
     
@@ -33,14 +33,16 @@ std::string    *Power::setPowerOnMap(std::string::size_type pos, std::string str
         str.replace(pos, 1, "D");
     
     finalReturn = &str;
-    return(finalReturn);
+	tmp = str;
+  //  return(finalReturn);
+	return ;
 }
 
 Map    *Power::findPowerOnMap(Map *map) {
     
     std::vector<std::string> *tmpMap = map->getMap();
     std::vector<std::string>::iterator iter = tmpMap->begin();
-    std::string *tmp;
+
     int i = 0;
     
     while (iter != tmpMap->end()) {
@@ -51,12 +53,14 @@ Map    *Power::findPowerOnMap(Map *map) {
         pos = std::string::npos;
              }
         if (pos != std::string::npos && pos < 20) {
-            tmp = new std::string();
-            tmp = setPowerOnMap(pos, *iter);
-            map->setLine(i, tmp);
-        }
-        //map->seeMap();
-        iter++;
+			std::string tmp;
+			setPowerOnMap(pos, *iter, tmp);
+           // tmp = setPowerOnMap(pos, *iter);
+            iter = map->setLine(i, &tmp);
+        //map->setLine(i, tmp);
+		}
+		else
+		  iter++;
         i++;
     }
     map->setMap(tmpMap);

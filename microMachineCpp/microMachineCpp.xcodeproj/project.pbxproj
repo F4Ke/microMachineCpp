@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A045D3FA18CE2E90002A969A /* MicroMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A045D3F818CE2E90002A969A /* MicroMachine.cpp */; };
+		A045D3FB18CE2E90002A969A /* OutPut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A045D3F918CE2E90002A969A /* OutPut.cpp */; };
 		A0521F2418BD496B00610E82 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0521F2318BD496B00610E82 /* Map.cpp */; };
 		A0521F2518BD81A600610E82 /* Power.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0A0BF2918BD137B008581AC /* Power.cpp */; };
 		A0A0BF1B18BD1354008581AC /* microMachineCpp.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0A0BF1A18BD1354008581AC /* microMachineCpp.1 */; };
@@ -30,6 +32,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A045D3F618CE2E84002A969A /* MicroMachine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MicroMachine.hpp; sourceTree = "<group>"; };
+		A045D3F718CE2E84002A969A /* Output.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Output.hpp; sourceTree = "<group>"; };
+		A045D3F818CE2E90002A969A /* MicroMachine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MicroMachine.cpp; sourceTree = "<group>"; };
+		A045D3F918CE2E90002A969A /* OutPut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OutPut.cpp; sourceTree = "<group>"; };
 		A0521F2218BD496100610E82 /* Map.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Map.hpp; sourceTree = "<group>"; };
 		A0521F2318BD496B00610E82 /* Map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Map.cpp; sourceTree = "<group>"; };
 		A0A0BF1518BD1354008581AC /* microMachineCpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = microMachineCpp; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +91,8 @@
 		A0A0BF2118BD137B008581AC /* Header */ = {
 			isa = PBXGroup;
 			children = (
+				A045D3F618CE2E84002A969A /* MicroMachine.hpp */,
+				A045D3F718CE2E84002A969A /* Output.hpp */,
 				A0521F2218BD496100610E82 /* Map.hpp */,
 				A0A0BF2218BD137B008581AC /* myException.hpp */,
 				A0A0BF2318BD137B008581AC /* Power.hpp */,
@@ -98,6 +106,8 @@
 		A0A0BF2618BD137B008581AC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A045D3F818CE2E90002A969A /* MicroMachine.cpp */,
+				A045D3F918CE2E90002A969A /* OutPut.cpp */,
 				A0521F2318BD496B00610E82 /* Map.cpp */,
 				A0A0BF2718BD137B008581AC /* main.cpp */,
 				A0A0BF2818BD137B008581AC /* myException.cpp */,
@@ -164,7 +174,9 @@
 				A0A0BF2C18BD137B008581AC /* main.cpp in Sources */,
 				A0521F2418BD496B00610E82 /* Map.cpp in Sources */,
 				A0A0BF3018BD137B008581AC /* TimeOut.cpp in Sources */,
+				A045D3FB18CE2E90002A969A /* OutPut.cpp in Sources */,
 				A0A0BF2F18BD137B008581AC /* StartInstance.cpp in Sources */,
+				A045D3FA18CE2E90002A969A /* MicroMachine.cpp in Sources */,
 				A0A0BF2D18BD137B008581AC /* myException.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

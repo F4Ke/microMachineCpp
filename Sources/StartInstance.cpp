@@ -33,7 +33,7 @@ void StartInstance::Launch()
 //	std::thread t1(tRun->startRun);
 	std::thread t1 (ActThreadRun, tRun);
 	t1.join();
-	tRun->startRun();
+	//tRun->startRun();
 
 	if (isInit)
 	{
@@ -45,7 +45,8 @@ void StartInstance::Launch()
             map = p->findPowerOnMap(map);
             std::cout << "V2" << std::endl;
             map->seeMap();
-            break;
+			std::cout << "-----------" << std::endl;
+			while (true);
 		}
 
 	}

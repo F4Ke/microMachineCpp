@@ -5,7 +5,7 @@
 
 int main(void) 
 {
-	//int onCommence = 0;
+	int onCommence = 0;
 
 	try
 	{

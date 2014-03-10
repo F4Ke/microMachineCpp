@@ -30,7 +30,9 @@ public :
 
     std::vector<std::string> *getMap() { return _map; }
     void        seeMap();
-    void        setLine(int i, std::string *tmp);
+    std::vector<std::string>::iterator        setLine(int i, std::string *tmp);
+  // void        setLine(int i, std::string *tmp);
+
 };
 
 #endif		// !__MAP_HH__

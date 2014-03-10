@@ -29,12 +29,15 @@ public:
     Power();
     ~Power();
     
-    ePower  powerMode;
+	ePower  powerMode;
     std::string powerMap;
     std::string::size_type pos;
     
     Map     *findPowerOnMap(Map *map);
-    std::string   *setPowerOnMap(std::string::size_type pos, std::string str);
+   // std::string   *setPowerOnMap(std::string::size_type pos, std::string str);
+    void   setPowerOnMap(std::string::size_type pos, std::string str,std::string &tmp);
+
+
 };
 
 #endif /* defined(__MicroMachine__Power__) */
