@@ -28,8 +28,10 @@ public:
     
     void    setOnMap();
     void    state();
-    void    startThinking();
+	void    abortAction() {}
+	void    startThinking() {}
 
 };
 
 #endif /* defined(__MICROMACHINE__) */
+

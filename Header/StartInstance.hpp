@@ -6,7 +6,7 @@
 #include "myException.hpp"
 #include "Map.hpp"
 #include "Power.hpp"
-
+#include "VirtualMachine.hpp"
 
 class StartInstance 
 {

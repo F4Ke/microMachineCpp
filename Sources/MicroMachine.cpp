@@ -23,5 +23,9 @@ void    MicroMachine::state() {
 }
 
 void    MicroMachine::startThinking() {
-        
+    
+}
+
+void    MicroMachine::abortAction() {
+    
 }
