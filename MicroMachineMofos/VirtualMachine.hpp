@@ -14,6 +14,10 @@
 #include    "MicroMachine.hpp"
 
 #define     pixelByBoxes (128)
+#define     pixelByCycles (2.6) // 2.6 pix par 15 ms  --- 170 par 1s DE BASE
+#define     pixelAccByMsByCycle (0.5) // sur une duree
+#define     pixelMoveByCycle (3) // degree
+
 
 class		VirtualMachine
 {

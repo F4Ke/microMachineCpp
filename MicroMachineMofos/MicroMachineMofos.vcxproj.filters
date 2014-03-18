@@ -27,10 +27,19 @@
     <ClCompile Include="TimeOut.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="power.cpp">
+    <ClCompile Include="Map.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Map.cpp">
+    <ClCompile Include="Power.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MicroMachine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OutPut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VirtualMachine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,10 +53,19 @@
     <ClInclude Include="TimeOut.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="power.hpp">
+    <ClInclude Include="Map.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Map.hpp">
+    <ClInclude Include="Power.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MicroMachine.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Output.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VirtualMachine.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
