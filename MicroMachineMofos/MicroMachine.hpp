@@ -19,18 +19,19 @@ public:
 	float vectorDirection; // 0 -> 360 // degree dicrection 
 	std::string Name;
 	std::string _state;
+	bool thinking;
 
 public:
     
-	MicroMachine();
+	MicroMachine(std::string name, float _posX, float _posY);
     ~MicroMachine();
     
     
     void    setOnMap();
     void    state(std::string);
-	void   abortAction() {}
-	void    startThinking() {}
-
+	void   abortAction();
+	void    startThinking();
+	
 };
 
 #endif /* defined(__MICROMACHINE__) */

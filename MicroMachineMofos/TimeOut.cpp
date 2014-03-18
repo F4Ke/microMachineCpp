@@ -4,7 +4,7 @@
 
 TimeOut::TimeOut()
 {
-	timeSecondsRunTotal =3;
+	timeSecondsRunTotal = 30;
 	timeMilissecondsToThink = 15;
 
 	tRUN.setTimerMod((typeMod)1);

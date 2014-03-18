@@ -43,6 +43,7 @@ public :
 	 void startToThink();
 
 	 void addMachineToList(MicroMachine *m );
+
 };
 
 #endif		// !__VIRTUALMACHINE_HPP__ //
