@@ -18,7 +18,9 @@ void    MicroMachine::setOnMap()
 	return ;
 }
 
-void    MicroMachine::state() {
+void    MicroMachine::state(std::string state) {
     
+
+	_state = state; 
 }
  

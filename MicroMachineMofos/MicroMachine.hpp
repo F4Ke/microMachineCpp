@@ -18,7 +18,7 @@ public:
 	float speed;
 	float vectorDirection; // 0 -> 360 // degree dicrection 
 	std::string Name;
-
+	std::string _state;
 
 public:
     
@@ -27,7 +27,7 @@ public:
     
     
     void    setOnMap();
-    void    state();
+    void    state(std::string);
 	void   abortAction() {}
 	void    startThinking() {}
 
