@@ -1,3 +1,4 @@
+
 #ifndef __TIMEOUT_HPP_
 #define __TIMEOUT_HPP_
 
@@ -50,6 +51,7 @@ public:
 //	void setMod(int mod); // 1 = RUN, 2 = THINK
 	bool isTimeoutRUN();
 	bool isTimeoutTHINK();
+
 
 private:
 	unsigned long timeSecondsRunTotal;// = 60s;

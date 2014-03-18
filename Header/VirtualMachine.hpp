@@ -14,18 +14,23 @@
 #include    "MicroMachine.hpp"
 
 #define     pixelByBoxes (128)
+#define     pixelByCycles (2.6) // 2.6 pix par 15 ms  --- 170 par 1s DE BASE
+#define     pixelAccByMsByCycle (0.5) // sur une duree
+#define     pixelMoveByCycle (3) // degree
+
 
 class		VirtualMachine
 {
 private :
-    std::vector<std::string> *_map; // a voir
+    std::vector<std::string> *_map;
 	std::map<int,int> result; // ID,SCORE
 	std::map<int,MicroMachine * > machineList; // ID,MicroMachine
-
+    std::string::size_type posX;
+    
 	OutPut *outPut;
 
 	bool isEnded;
-		bool isGoing;
+    bool isGoing;
 	int pos;
 
 public :
@@ -33,12 +38,14 @@ public :
     VirtualMachine();
     ~VirtualMachine();
 
-	 void Launch();
-	 void manageCycles();
+     void Launch(std::vector<std::string> _map);
+     void load(std::vector<std::string> _map);
+     void manageCycles();
 	 void abortCurrentAction();
 	 void startToThink();
 
 	 void addMachineToList(MicroMachine *m );
+
 };
 
 #endif		// !__VIRTUALMACHINE_HPP__ //

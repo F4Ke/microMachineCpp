@@ -9,22 +9,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../Sources/StartInstance.cpp"
-            timestampString = "415075775.927753"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
-            landmarkName = "StartInstance::StartInstance()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "../Sources/Power.cpp"
             timestampString = "415081028.881986"
             startingColumnNumber = "9223372036854775807"
@@ -33,50 +17,6 @@
             endingLineNumber = "46"
             landmarkName = "Power::findPowerOnMap(Map *map)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Power::findPowerOnMap(Map*)"
-                  moduleName = "microMachineCpp"
-                  urlString = "file:///Users/Luis/Documents/Dev/Depot/microMachineCpp/Sources/Power.cpp"
-                  timestampString = "415079496.932417"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "428">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Power::findPowerOnMap(Map*)"
-                  moduleName = "microMachineCpp"
-                  urlString = "file:///Users/Luis/Documents/Dev/Depot/microMachineCpp/Sources/Power.cpp"
-                  timestampString = "415079496.93274"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "518">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Power::findPowerOnMap(Map*)"
-                  moduleName = "microMachineCpp"
-                  urlString = "file:///Users/Luis/Documents/Dev/Depot/microMachineCpp/Sources/Power.cpp"
-                  timestampString = "415079496.933039"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "587">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

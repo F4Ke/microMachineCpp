@@ -39,7 +39,7 @@ void StartInstance::Launch()
 			std::cout << "-----------" << std::endl;
 	
 			
-			vm->Launch();
+			vm->Launch(*map->getMap());
 
 	}
 	else
