@@ -1,4 +1,3 @@
-
 #include "StartInstance.hpp"
 #include "TimeOut.hpp"
 
@@ -8,7 +7,7 @@ StartInstance::StartInstance()
 	isInit = false;
 	map = new Map();
     _map = new std::vector<std::string>();
-	//_map = map->parser("/Users/Luis/Documents/Dev/Depot/microMachineCpp/MAP/map1");
+//	_map = map->parser("/Users/Luis/Documents/Dev/Depot/microMachineCpp/MAP/map1");
     _map = map->parser("MAP/map1.txt");
 
 	map->setMap(_map);
@@ -39,7 +38,7 @@ void StartInstance::Launch()
 			std::cout << "-----------" << std::endl;
 	
 			
-			vm->Launch();
+			vm->Launch(*map->getMap());
 
 	}
 	else

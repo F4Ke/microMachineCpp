@@ -35,7 +35,7 @@ void    MicroMachine::startThinking( )
 	if (!thinking)
 	{
 		thinking = true;
-		std::cout << " JE think la! OH ! " << std::endl;
+		//std::cout << " JE think la! OH ! " << std::endl;
 	}
 
 }
@@ -46,7 +46,7 @@ void    MicroMachine::abortAction( )
 	 
 	thinking = false;
 		
-	std::cout << " :( - Bye" << std::endl;
+	//std::cout << " :( - Bye" << std::endl;
 	
 
 }

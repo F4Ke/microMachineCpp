@@ -22,14 +22,15 @@
 class		VirtualMachine
 {
 private :
-    std::vector<std::string> *_map; // a voir
+    std::vector<std::string> *_map;
 	std::map<int,int> result; // ID,SCORE
 	std::map<int,MicroMachine * > machineList; // ID,MicroMachine
-
+    std::string::size_type posX;
+    
 	OutPut *outPut;
 
 	bool isEnded;
-		bool isGoing;
+    bool isGoing;
 	int pos;
 
 public :
@@ -37,11 +38,12 @@ public :
     VirtualMachine();
     ~VirtualMachine();
 
-	 void Launch();
-	 void manageCycles();
+     void Launch(std::vector<std::string> _map);
+     void load(std::vector<std::string> _map);
+     void manageCycles();
 	 void abortCurrentAction();
 	 void startToThink();
-
+	 void setOutPut();
 	 void addMachineToList(MicroMachine *m );
 
 };
