@@ -62,22 +62,6 @@ void    VirtualMachine::load(std::vector<std::string> _map) {
 	m3->vectorDirection = 0;
 	m4->vectorDirection = 0;
 
-	//
-	// S'occuper de la rotation, en imaginant un cercle trigo - pour les angles -
-	//ou 0 est tout devant, 90 a droite, 180 en bas, et 240 a gauche, 
-	//donc 360 = 0 quand on revient en haut
-	//
-	/*
-			 0  ( ou 360)
-		240		90
-			180
-
-			donc caller une petite formule pour bouger avec l'angle
-	
-	se capter en regarder pour la gestion collision
-	
-
-	*/
 	machineList.insert (std::pair<int,MicroMachine * >(0,m1) );
 	machineList.insert (std::pair<int,MicroMachine * >(1,m2) );
 	machineList.insert (std::pair<int,MicroMachine * >(2,m3) );
@@ -124,8 +108,13 @@ while (tmp < machineList.size())
 	}
 
 //TMP
+// MEGA TEST
 	// just for test
-machineList[0]->posY -= machineList[0]->speed;
+    machineList[0]->Move();
+	if (this->cycle % 2 == 0)
+	{
+		machineList[0]->startRotate(pixelMoveByCycle, LEFTDIR); // 2 == left
+	}
 //
 isGoing = true;
 }
@@ -142,7 +131,7 @@ void VirtualMachine::manageCycles()
 {
 
 
-	int cycle = 1;
+	this->cycle = 1;
 	while(!isEnded)
 		{
 			std::cout << "Cycle n" << cycle << std::endl;
@@ -157,7 +146,9 @@ void VirtualMachine::manageCycles()
 					startToThink();
 			//	t1.join();
 				//
-				std::chrono::milliseconds dura( 15 );
+			//	std::chrono::milliseconds dura( 15 );
+				std::chrono::milliseconds dura( 1000 ); // for debug
+
 				std::this_thread::sleep_for( dura );//this makes this thread sleep for 15ms
 				break;
 

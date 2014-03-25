@@ -32,6 +32,7 @@ private :
 	bool isEnded;
     bool isGoing;
 	int pos;
+	int cycle;
 
 public :
 
