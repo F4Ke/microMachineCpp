@@ -26,7 +26,7 @@ void    Power::setPowerOnMap(std::string::size_type pos, std::string str, std::s
     std::srand(std::time(0));
     int powerRand = (std::rand() % 2) + 1;
     powerMode = (ePower)powerRand;
-
+	
     if (powerMode == powerUp)
         str.replace(pos, 1, "U");
     else if (powerMode == powerDown)

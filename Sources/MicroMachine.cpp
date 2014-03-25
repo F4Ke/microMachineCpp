@@ -9,6 +9,7 @@ MicroMachine::MicroMachine(std::string name, float _posX, float _posY ) {
 	posY = _posY;
 	Name = name;
 	thinking = false;
+    vectorDirection = 0;
 }
 
 MicroMachine::~MicroMachine() {
@@ -35,7 +36,7 @@ void    MicroMachine::startThinking( )
 	if (!thinking)
 	{
 		thinking = true;
-		std::cout << " JE think la! OH ! " << std::endl;
+		//std::cout << " JE think la! OH ! " << std::endl;
 	}
 
 }
@@ -46,8 +47,23 @@ void    MicroMachine::abortAction( )
 	 
 	thinking = false;
 		
-	std::cout << " :( - Bye" << std::endl;
+	//std::cout << " :( - Bye" << std::endl;
 	
 
 }
- 
+
+void    MicroMachine::startRotate(int deg) {
+    
+    if (deg > 0 && deg < 180)
+        vectorDirection = deg;
+    else if (deg > 180 && deg < 360)
+        vectorDirection = deg;
+    else if (deg == 0)
+        vectorDirection = deg;
+    else if (deg == 180)
+        vectorDirection = deg;
+}
+
+void    MicroMachine::startMove() {
+    
+}

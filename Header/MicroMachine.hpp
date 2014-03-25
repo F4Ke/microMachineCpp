@@ -29,8 +29,10 @@ public:
     
     void    setOnMap();
     void    state(std::string);
-	void   abortAction();
+	void    abortAction();
 	void    startThinking();
+    void    startRotate(int deg);
+    void    startMove();
 	
 };
 

@@ -22,7 +22,9 @@ class timer {
 		}
 
 		unsigned long elapsedTimeMillisecond() {
-			return ((unsigned long) clock() - begTime) / (CLOCKS_PER_SEC *1000);
+		//	return ((unsigned long) clock() - begTime) / (CLOCKS_PER_SEC /1000);
+		return ((unsigned long) clock() - begTime) / (CLOCKS_PER_SEC );
+
 		}
 
 		void setTimerMod(typeMod emod)

@@ -43,7 +43,7 @@ public :
      void manageCycles();
 	 void abortCurrentAction();
 	 void startToThink();
-
+	 void setOutPut();
 	 void addMachineToList(MicroMachine *m );
 
 };
