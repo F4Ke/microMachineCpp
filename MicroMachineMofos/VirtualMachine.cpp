@@ -5,7 +5,7 @@ VirtualMachine::VirtualMachine()
    	isEnded = false;
 	isGoing = false;
 	pos = 0;
-
+	this->_map = NULL;
 	numberID = 0;
 
 }
@@ -20,6 +20,11 @@ void    ActThreadRun(TimeOut *tRun)
 	//std::chrono::milliseconds dura( 2000 ); // 
   //  std::this_thread::sleep_for( dura );//this makes this thread sleep for 2s
 
+}
+
+void    VirtualMachine::setMap(std::vector<std::string> *map)
+{
+	this->_map = map;
 }
 
 void    ActThreadThink(TimeOut *tThink)
@@ -143,6 +148,7 @@ void VirtualMachine::manageCycles()
 				//std::chrono::milliseconds dura( 1000 ); // for debug
 
 				std::this_thread::sleep_for( dura );//this makes this thread sleep for 15ms
+				checkCollision();
 				break;
 
 				//
@@ -151,6 +157,43 @@ void VirtualMachine::manageCycles()
 			cycle++;
 			setOutPut();
 		}
+
+//	this->outPut->showEndOfGame();
+
+}
+
+void VirtualMachine::checkCollision()
+{
+	int tmp = 0;
+	int xLenght = this->_map[0].size() - 2;
+	int yLenght = this->_map->size() - 2;
+
+	if (this->_map != NULL)
+	{
+	while (tmp < machineList.size())
+	{
+		int X = (int)(machineList[tmp]->posX/pixelByBoxes) - 1;
+		int Y = (int)(machineList[tmp]->posY/pixelByBoxes) - 1;
+		if (X < xLenght && Y < yLenght)  
+		{
+ 		if (machineList[tmp]->direction == UP && X + 1< xLenght)
+			if (this->_map[Y][X + 1] == "1")
+				machineList[tmp]->abortAction();
+		if (machineList[tmp]->direction == DOWN && X - 1 > 0)
+			if (this->_map[Y][X - 1] == "1")
+				machineList[tmp]->abortAction();
+		if (machineList[tmp]->direction == LEFT && machineList[tmp]->direction == LEFTDOWN && machineList[tmp]->direction == LEFTUP && Y -1 > 0)
+			if (this->_map[Y -1][X] == "1")
+				machineList[tmp]->abortAction();
+		if (machineList[tmp]->direction == RIGHT || machineList[tmp]->direction == RIGHTDOWN || machineList[tmp]->direction == RIGHTUP && Y + 1 < yLenght)
+			if (this->_map[Y +1][X] == "1")
+				machineList[tmp]->abortAction();		
+			}
+			
+		
+		tmp++;
+	}
+	}
 }
 
 void VirtualMachine::addMachineToList(MicroMachine *m)

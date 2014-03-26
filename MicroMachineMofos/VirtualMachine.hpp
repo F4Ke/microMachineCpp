@@ -39,14 +39,15 @@ public :
     VirtualMachine();
     ~VirtualMachine();
 
+	 void setMap(std::vector<std::string> *map);
      void Launch(std::vector<std::string> _map);
      void load(std::vector<std::string> _map);
      void manageCycles();
 	 void abortCurrentAction();
 	 void startToThink();
 	 void setOutPut();
-	 void addMachineToList(MicroMachine *m );
-
+	 void addMachineToList(MicroMachine *m);
+	 void checkCollision();
 };
 
 #endif		// !__VIRTUALMACHINE_HPP__ //
