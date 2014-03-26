@@ -37,7 +37,7 @@ void StartInstance::Launch()
             map->seeMap();
 			std::cout << "-----------" << std::endl;
 	
-			
+			vm->setMap(map->getMap());		
 			vm->Launch(*map->getMap());
 
 	}
