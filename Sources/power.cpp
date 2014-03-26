@@ -1,53 +1,68 @@
 //
-//  power.cpp
+//  Power.cpp
 //  MicroMachine
 //
 //  Created by Luis on 25/02/2014.
 //  Copyright (c) 2014 Luis. All rights reserved.
 //
 
-#include "power.h"
+#include    "Power.hpp"
+#include    "StartInstance.hpp"
 
 //Constructeur + Destructeur
 
-power::power() {
+Power::Power() {
 }
 
-power::~power() {
+Power::~Power() {
 }
 
 //Methodes
 
-void    power::setPowerOnMap(std::string::sizeof pos, int i) {
+void    Power::setPowerOnMap(std::string::size_type pos, std::string str, std::string &tmp) {
+    
+    std::string *finalReturn;
     
     std::srand(std::time(0));
     int powerRand = (std::rand() % 2) + 1;
     powerMode = (ePower)powerRand;
-    
+	
     if (powerMode == powerUp)
-        map[i][pos] = "U";
+        str.replace(pos, 1, "U");
     else if (powerMode == powerDown)
-        map[i][pos] = "D";
+        str.replace(pos, 1, "D");
+    
+    finalReturn = &str;
+	tmp = str;
+  //  return(finalReturn);
+	return ;
 }
 
-void    power::findPowerOnMap(std::vector<std::string> map) {
-
-    std::ifstream file(argv[1], std::ios::in);
+Map    *Power::findPowerOnMap(Map *map) {
     
+    std::vector<std::string> *tmpMap = map->getMap();
+    std::vector<std::string>::iterator iter = tmpMap->begin();
+
     int i = 0;
     
-    if (file) {
-        std::cout << "Map is Open" << std::endl;
-        while (getline(fileMap, powerMap)) {
-            while (powerMap) {
-                pos = powerMap.find("X");
-                if (pos == std::string::npos)
-                    setPowerOnMap(pos, i);
+    while (iter != tmpMap->end()) {
+        try {
+        pos = iter->find('X');
             }
-            i++;
-        }
-        file.close();
+        catch (myException ex) {
+        pos = std::string::npos;
+             }
+        if (pos != std::string::npos && pos < 20) {
+			std::string tmp;
+			setPowerOnMap(pos, *iter, tmp);
+           // tmp = setPowerOnMap(pos, *iter);
+            iter = map->setLine(i, &tmp);
+        //map->setLine(i, tmp);
+		}
+		else
+		  iter++;
+        i++;
     }
-    else
-        std::cerr << "Impossible to open Map" << std::endl;
+    map->setMap(tmpMap);
+    return (map);
 }
