@@ -53,20 +53,7 @@ std::vector<std::string> *Map::parser(std::string path)
   return _map;
 }
 
-//void        Map::seeMap() {
-//    std::vector<std::string>::iterator iter = _map->begin();
-//    while (iter != _map->end()) {
-//        std::cout << *iter << std::endl;
-//        iter++;
-//    }
-//}
-//
-//void        Map::setLine(int i, std::string *tmp) {
-//    this->_map->insert(_map->begin() + i, *tmp);
-//    this->_map->erase(_map->begin() + i + 1);
-//}
 
-/// save ::
 void        Map::seeMap() {
     std::vector<std::string>::iterator iter = _map->begin();
 	int line = 0;

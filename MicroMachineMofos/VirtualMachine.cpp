@@ -4,7 +4,9 @@ VirtualMachine::VirtualMachine()
 {
    	isEnded = false;
 	isGoing = false;
-	pos = 1;
+	pos = 0;
+
+	numberID = 0;
 
 }
 
@@ -15,7 +17,7 @@ VirtualMachine::~VirtualMachine()
 void    ActThreadRun(TimeOut *tRun)
 {
 	tRun->startRun();
-	//std::chrono::milliseconds dura( 2000 ); //
+	//std::chrono::milliseconds dura( 2000 ); // 
   //  std::this_thread::sleep_for( dura );//this makes this thread sleep for 2s
 
 }
@@ -89,10 +91,10 @@ void    VirtualMachine::Launch(std::vector<std::string> _map)
 
 void VirtualMachine::abortCurrentAction()
 {
-int tmp = 1;
+int tmp = 0;
 while (tmp < machineList.size())
 	{
-	machineList[pos]->abortAction();
+	machineList[tmp]->abortAction();
 	tmp++;
 	}
 isGoing = false;
@@ -100,22 +102,13 @@ isGoing = false;
 
 void VirtualMachine::startToThink()
 {
-int tmp = 1;
+int tmp = 0;
 while (tmp < machineList.size())
 	{
-	machineList[pos]->startThinking();
+	machineList[tmp]->startThinking();
 	tmp++;
 	}
 
-//TMP
-// MEGA TEST
-	// just for test
-    machineList[0]->Move();
-	if (this->cycle % 2 == 0)
-	{
-		machineList[0]->startRotate(pixelMoveByCycle, LEFTDIR); // 2 == left
-	}
-//
 isGoing = true;
 }
 
@@ -146,8 +139,8 @@ void VirtualMachine::manageCycles()
 					startToThink();
 			//	t1.join();
 				//
-			//	std::chrono::milliseconds dura( 15 );
-				std::chrono::milliseconds dura( 1000 ); // for debug
+				std::chrono::milliseconds dura( 15 );
+				//std::chrono::milliseconds dura( 1000 ); // for debug
 
 				std::this_thread::sleep_for( dura );//this makes this thread sleep for 15ms
 				break;

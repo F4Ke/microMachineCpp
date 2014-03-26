@@ -3,7 +3,7 @@
 
 //Constructeur + Destructeur
 
-MicroMachine::MicroMachine(std::string name, float _posX, float _posY ) {
+MicroMachine::MicroMachine(std::string name, float _posX, float _posY) {
 
 	posX = _posX;
 	posY = _posY;
@@ -12,6 +12,9 @@ MicroMachine::MicroMachine(std::string name, float _posX, float _posY ) {
     vectorDirection = 0;
 	this->ratioDegree = 3.14159/180;
 	this->direction = UP;
+	this->action = "move";
+	this->ia = new ExampleIA("MonIA", numberID);
+	numberID++;
 }
 
 MicroMachine::~MicroMachine() {
@@ -39,6 +42,19 @@ void    MicroMachine::startThinking( )
 	{
 		thinking = true;
 		//std::cout << " JE think la! OH ! " << std::endl;
+
+		// listen to output IA
+		// -- example : "ia:ID-Action"
+		this->ia->action();
+
+		if (action == "move") // move on standar output
+		{
+			Move();
+ 		}
+		else if (action == "left") //
+		{
+			startRotate(pixelMoveByCycle, LEFTDIR); // 2 == left
+		}
 	}
 
 }

@@ -43,11 +43,8 @@ void TimeOut::startThink()
 	}
 	// Kill Think
 }
-//
-//void TimeOut::setMod(int index)
-//{
-//	this->IndexMod = index;
-//}
+
+
 
 bool TimeOut::isTimeoutRUN() 
 {

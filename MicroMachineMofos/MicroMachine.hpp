@@ -7,6 +7,7 @@
 #include <cmath>
 
 #include    "Map.hpp"
+#include    "ExampleIA.hpp"
 
 enum eDirection {
     UP = 1,
@@ -25,10 +26,11 @@ enum eGetDirct
 	LEFTDIR = 2
 };
 
+static int numberID;
 
 class       MicroMachine 
 {
-
+	
 public:
 	int ID;
 	float posX;
@@ -41,6 +43,9 @@ public:
 	float ratioDegree; // 3.14159/180;
 	eDirection direction;
 	eGetDirct getDirect;
+	std::string action;
+	ExampleIA *ia;
+
 public:
     
 	MicroMachine(std::string name, float _posX, float _posY);
