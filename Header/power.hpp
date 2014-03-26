@@ -1,19 +1,21 @@
 //
-//  power.h
+//  Power.hpp
 //  MicroMachine
 //
 //  Created by Luis on 25/02/2014.
 //  Copyright (c) 2014 Luis. All rights reserved.
 //
 
-#ifndef __MicroMachine__power__
-#define __MicroMachine__power__
+#ifndef __MicroMachine__Power__
+#define __MicroMachine__Power__
 
 #include    <iostream>
 #include    <vector>
 #include    <string>
 #include    <cstdlib>
 #include    <ctime>
+#include    "Map.hpp"
+
 
 
 enum ePower {
@@ -21,18 +23,21 @@ enum ePower {
     powerDown = 2
 };
 
-class       power {
+class       Power {
 
 public:
-    power();
-    ~power();
+    Power();
+    ~Power();
     
-    ePower  powerMode;
+	ePower  powerMode;
     std::string powerMap;
     std::string::size_type pos;
     
-    void    findPowerOnMap(std::vector<std::string> map);
-    void    setPowerOnMap(std::string::size_type pos, int i);
+    Map     *findPowerOnMap(Map *map);
+   // std::string   *setPowerOnMap(std::string::size_type pos, std::string str);
+    void   setPowerOnMap(std::string::size_type pos, std::string str,std::string &tmp);
+
+
 };
 
-#endif /* defined(__MicroMachine__power__) */
+#endif /* defined(__MicroMachine__Power__) */

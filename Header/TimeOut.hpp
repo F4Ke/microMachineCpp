@@ -1,4 +1,3 @@
-
 #ifndef __TIMEOUT_HPP_
 #define __TIMEOUT_HPP_
 
@@ -22,7 +21,9 @@ class timer {
 		}
 
 		unsigned long elapsedTimeMillisecond() {
-			return ((unsigned long) clock() - begTime) / (CLOCKS_PER_SEC *1000);
+		//	return ((unsigned long) clock() - begTime) / (CLOCKS_PER_SEC /1000);
+		return ((unsigned long) clock() - begTime) / (CLOCKS_PER_SEC );
+
 		}
 
 		void setTimerMod(typeMod emod)
@@ -37,7 +38,7 @@ class timer {
 			if (etypeMod == THINK)
 				return seconds >= elapsedTimeMillisecond();
 			else
-				false;
+				return false;
 		}
 };
 
@@ -51,6 +52,7 @@ public:
 //	void setMod(int mod); // 1 = RUN, 2 = THINK
 	bool isTimeoutRUN();
 	bool isTimeoutTHINK();
+
 
 private:
 	unsigned long timeSecondsRunTotal;// = 60s;

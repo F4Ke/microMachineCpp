@@ -1,11 +1,10 @@
-
 #include "TimeOut.hpp"
 
 
 TimeOut::TimeOut()
 {
-	timeSecondsRunTotal =3;
-	timeMilissecondsToThink = 15;
+	timeSecondsRunTotal = 30;
+	timeMilissecondsToThink = 1;
 
 	tRUN.setTimerMod((typeMod)1);
 	tTHINK.setTimerMod((typeMod)2);
@@ -44,11 +43,8 @@ void TimeOut::startThink()
 	}
 	// Kill Think
 }
-//
-//void TimeOut::setMod(int index)
-//{
-//	this->IndexMod = index;
-//}
+
+
 
 bool TimeOut::isTimeoutRUN() 
 {
