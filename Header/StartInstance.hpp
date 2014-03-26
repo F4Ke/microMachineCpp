@@ -1,4 +1,3 @@
-
 #ifndef __STARTINSTANCE_HPP_
 #define __STARTINSTANCE_HPP_
 
